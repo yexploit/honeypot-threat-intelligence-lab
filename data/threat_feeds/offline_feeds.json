@@ -1,0 +1,93 @@
+{
+  "description": "Offline threat intelligence feed snapshot for lab correlation (Honeynet-style research data).",
+  "source": "lab_offline_feeds",
+  "updated": "2026-03-02T00:00:00Z",
+  "malicious_ips": {
+    "185.220.101.45": {
+      "reputation": "known_botnet_c2",
+      "abuse_score": 98,
+      "categories": ["ssh-bruteforce", "mirai-family", "tor-exit"],
+      "country": "DE",
+      "first_seen": "2025-11-12",
+      "feeds": ["AbuseIPDB", "AlienVault OTX", "The Honeynet Project"]
+    },
+    "45.33.32.156": {
+      "reputation": "cryptominer_campaign",
+      "abuse_score": 87,
+      "categories": ["ssh-bruteforce", "cryptomining"],
+      "country": "US",
+      "first_seen": "2026-01-04",
+      "feeds": ["AbuseIPDB", "AlienVault OTX"]
+    },
+    "103.149.172.88": {
+      "reputation": "iot_botnet_scanner",
+      "abuse_score": 95,
+      "categories": ["telnet-bruteforce", "iot-malware", "mirai-variant"],
+      "country": "ID",
+      "first_seen": "2025-09-20",
+      "feeds": ["AbuseIPDB", "The Honeynet Project"]
+    },
+    "91.219.237.12": {
+      "reputation": "credential_stuffing_bot",
+      "abuse_score": 76,
+      "categories": ["ssh-bruteforce", "credential-stuffing"],
+      "country": "NL",
+      "first_seen": "2026-02-01",
+      "feeds": ["AbuseIPDB"]
+    }
+  },
+  "malicious_urls": {
+    "http://185.220.101.45/bins/mirai.x86": {
+      "malware_family": "Mirai",
+      "type": "elf_dropper",
+      "feeds": ["AlienVault OTX", "The Honeynet Project"]
+    },
+    "http://45.33.32.156/xmrig.tar.gz": {
+      "malware_family": "XMRig",
+      "type": "cryptominer",
+      "feeds": ["AlienVault OTX"]
+    },
+    "http://103.149.172.88/l.sh": {
+      "malware_family": "Mirai-loader",
+      "type": "shell_loader",
+      "feeds": ["The Honeynet Project"]
+    },
+    "http://103.149.172.88/bot.arm7": {
+      "malware_family": "Mirai-variant",
+      "type": "elf_bot",
+      "feeds": ["AlienVault OTX", "The Honeynet Project"]
+    },
+    "http://malware-cdn.example.invalid/dropper.sh": {
+      "malware_family": "Generic-dropper",
+      "type": "shell_dropper",
+      "feeds": ["lab_heuristic"]
+    }
+  },
+  "malicious_hashes": {
+    "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": {
+      "family": "Mirai",
+      "type": "elf",
+      "feeds": ["AlienVault OTX"]
+    },
+    "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08": {
+      "family": "XMRig",
+      "type": "archive",
+      "feeds": ["AlienVault OTX"]
+    },
+    "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d2852309f9f9f0c1": {
+      "family": "Mirai-loader",
+      "type": "shell",
+      "feeds": ["The Honeynet Project"]
+    },
+    "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b": {
+      "family": "Mirai-variant",
+      "type": "elf",
+      "feeds": ["AlienVault OTX"]
+    },
+    "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce": {
+      "family": "Generic-dropper",
+      "type": "shell",
+      "feeds": ["lab_heuristic"]
+    }
+  }
+}

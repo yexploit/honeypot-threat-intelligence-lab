@@ -1,0 +1,122 @@
+[
+  {
+    "session_id": "c3d4e5f6a7b8",
+    "src_ip": "103.149.172.88",
+    "protocol": "telnet",
+    "primary_type": "iot_botnet_propagation",
+    "labels": [
+      "iot_botnet_propagation",
+      "malware_download",
+      "telnet_abuse"
+    ],
+    "automation": "automated",
+    "confidence": 0.9,
+    "failed_logins": 2,
+    "success": true,
+    "command_count": 2,
+    "download_count": 2,
+    "notes": [
+      "Mirai/IoT botnet tooling indicators",
+      "Telnet channel used (common for IoT bots)"
+    ]
+  },
+  {
+    "session_id": "a1b2c3d4e5f6",
+    "src_ip": "185.220.101.45",
+    "protocol": "ssh",
+    "primary_type": "iot_botnet_propagation",
+    "labels": [
+      "iot_botnet_propagation",
+      "malware_download",
+      "ssh_bruteforce"
+    ],
+    "automation": "automated",
+    "confidence": 0.9,
+    "failed_logins": 6,
+    "success": true,
+    "command_count": 5,
+    "download_count": 1,
+    "notes": [
+      "bruteforce then success (6 prior fails)",
+      "Mirai/IoT botnet tooling indicators",
+      "scripted SSH client: SSH-2.0-libssh2_1.10.0"
+    ]
+  },
+  {
+    "session_id": "f6a7b8c9d0e1",
+    "src_ip": "185.220.101.45",
+    "protocol": "ssh",
+    "primary_type": "malware_download",
+    "labels": [
+      "defense_evasion",
+      "malware_download"
+    ],
+    "automation": "automated",
+    "confidence": 0.85,
+    "failed_logins": 0,
+    "success": true,
+    "command_count": 2,
+    "download_count": 1,
+    "notes": [
+      "Log wiping / firewall flush"
+    ]
+  },
+  {
+    "session_id": "d4e5f6a7b8c9",
+    "src_ip": "198.51.100.77",
+    "protocol": "ssh",
+    "primary_type": "manual_reconnaissance",
+    "labels": [
+      "manual_reconnaissance"
+    ],
+    "automation": "likely_manual",
+    "confidence": 0.7,
+    "failed_logins": 0,
+    "success": true,
+    "command_count": 7,
+    "download_count": 0,
+    "notes": [
+      "6 recon commands, human-like pacing"
+    ]
+  },
+  {
+    "session_id": "b2c3d4e5f6a7",
+    "src_ip": "45.33.32.156",
+    "protocol": "ssh",
+    "primary_type": "cryptominer_deployment",
+    "labels": [
+      "cryptominer_deployment",
+      "malware_download",
+      "persistence"
+    ],
+    "automation": "automated",
+    "confidence": 0.92,
+    "failed_logins": 2,
+    "success": true,
+    "command_count": 6,
+    "download_count": 1,
+    "notes": [
+      "Cryptominer / mining-pool indicators",
+      "Persistence mechanism attempted",
+      "scripted SSH client: SSH-2.0-Paramiko_2.11.0"
+    ]
+  },
+  {
+    "session_id": "e5f6a7b8c9d0",
+    "src_ip": "91.219.237.12",
+    "protocol": "ssh",
+    "primary_type": "credential_stuffing",
+    "labels": [
+      "credential_stuffing"
+    ],
+    "automation": "automated",
+    "confidence": 0.75,
+    "failed_logins": 8,
+    "success": false,
+    "command_count": 0,
+    "download_count": 0,
+    "notes": [
+      "8 failed logins, no successful auth"
+    ]
+  }
+]

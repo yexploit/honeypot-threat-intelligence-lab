@@ -1,0 +1,100 @@
+# Honeypot Threat Intelligence Lab
+# Cowrie + ELK Stack — works on Windows & Linux via Docker Desktop / Docker Engine
+#
+# Profiles:
+#   default  → Cowrie honeypot only
+#   --profile elk → Elasticsearch + Logstash + Kibana
+#
+# Example:
+#   docker compose up -d
+#   docker compose --profile elk up -d
+
+services:
+  cowrie:
+    image: cowrie/cowrie:latest
+    container_name: honeypot_cowrie
+    restart: unless-stopped
+    ports:
+      # Controlled exposure: map host ports → Cowrie (do NOT bind real 22/23 on host)
+      - "${COWRIE_SSH_PORT:-2222}:2222"
+      - "${COWRIE_TELNET_PORT:-2223}:2223"
+    volumes:
+      - ./config/cowrie/cowrie.cfg:/cowrie/cowrie-git/etc/cowrie.cfg:ro
+      - cowrie_logs:/cowrie/cowrie-git/var/log/cowrie
+      - cowrie_downloads:/cowrie/cowrie-git/var/lib/cowrie/downloads
+      - cowrie_tty:/cowrie/cowrie-git/var/lib/cowrie/tty
+    environment:
+      - COWRIE_TELNET_ENABLED=yes
+    networks:
+      - honeynet
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.3
+    container_name: honeypot_elasticsearch
+    profiles: ["elk"]
+    restart: unless-stopped
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - xpack.security.http.ssl.enabled=false
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - bootstrap.memory_lock=true
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    ports:
+      - "${ES_PORT:-9200}:9200"
+    networks:
+      - honeynet
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s http://localhost:9200 >/dev/null || exit 1"]
+      interval: 20s
+      timeout: 10s
+      retries: 10
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:8.15.3
+    container_name: honeypot_logstash
+    profiles: ["elk"]
+    restart: unless-stopped
+    volumes:
+      - ./config/logstash/pipeline:/usr/share/logstash/pipeline:ro
+      - cowrie_logs:/cowrie/logs:ro
+    environment:
+      - LS_JAVA_OPTS=-Xms256m -Xmx256m
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    networks:
+      - honeynet
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.15.3
+    container_name: honeypot_kibana
+    profiles: ["elk"]
+    restart: unless-stopped
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - SERVER_NAME=honeypot-kibana
+    ports:
+      - "${KIBANA_PORT:-5601}:5601"
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    networks:
+      - honeynet
+
+volumes:
+  cowrie_logs:
+  cowrie_downloads:
+  cowrie_tty:
+  es_data:
+
+networks:
+  honeynet:
+    driver: bridge
+    name: honeynet_lab

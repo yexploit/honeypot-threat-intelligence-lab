@@ -1,0 +1,94 @@
+[
+  {
+    "path": "C:\\mini projects\\Honeypot Threat Intelligence Lab\\data\\downloaded\\a1b2c3d4e5f6-mirai.x86",
+    "filename": "a1b2c3d4e5f6-mirai.x86",
+    "size_bytes": 150,
+    "sha256": "b74f50eca27bf4688bea7eaf4af65f27cdca115c97fe55eb7414a3ab5cbe5b9b",
+    "urls": [],
+    "ips": [],
+    "indicators": [
+      "filename_botnet_hint",
+      "iot_botnet"
+    ],
+    "risk": "critical",
+    "notes": [
+      "Static lab analysis only \u2014 samples are safe mocks unless from live Cowrie downloads"
+    ]
+  },
+  {
+    "path": "C:\\mini projects\\Honeypot Threat Intelligence Lab\\data\\downloaded\\b2c3d4e5f6a7-xmrig.tar.gz",
+    "filename": "b2c3d4e5f6a7-xmrig.tar.gz",
+    "size_bytes": 161,
+    "sha256": "b35687abbb2cb122cb568c2b1483f4983ba3cb6371d6bef23e5cc8ec349928de",
+    "urls": [],
+    "ips": [],
+    "indicators": [
+      "cryptominer",
+      "filename_miner_hint"
+    ],
+    "risk": "critical",
+    "notes": [
+      "Static lab analysis only \u2014 samples are safe mocks unless from live Cowrie downloads"
+    ]
+  },
+  {
+    "path": "C:\\mini projects\\Honeypot Threat Intelligence Lab\\data\\downloaded\\c3d4e5f6a7b8-bot.arm7",
+    "filename": "c3d4e5f6a7b8-bot.arm7",
+    "size_bytes": 63,
+    "sha256": "da078fa752a81fa9a81a0e720af708cc5bc257b0bad790858f256e5e38a3a602",
+    "urls": [],
+    "ips": [],
+    "indicators": [
+      "filename_botnet_hint"
+    ],
+    "risk": "medium",
+    "notes": [
+      "Static lab analysis only \u2014 samples are safe mocks unless from live Cowrie downloads"
+    ]
+  },
+  {
+    "path": "C:\\mini projects\\Honeypot Threat Intelligence Lab\\data\\downloaded\\c3d4e5f6a7b8-l.sh",
+    "filename": "c3d4e5f6a7b8-l.sh",
+    "size_bytes": 339,
+    "sha256": "7c692b393a7039964f76b6fa08ebb4dd3fb2317d08b9238b8ca36e3454dd4247",
+    "urls": [
+      "http://103.149.172.88/bot.${ARCH}"
+    ],
+    "ips": [
+      "103.149.172.88"
+    ],
+    "indicators": [
+      "background_exec",
+      "downloader",
+      "iot_botnet",
+      "make_executable",
+      "shell_script"
+    ],
+    "risk": "critical",
+    "notes": [
+      "Static lab analysis only \u2014 samples are safe mocks unless from live Cowrie downloads"
+    ]
+  },
+  {
+    "path": "C:\\mini projects\\Honeypot Threat Intelligence Lab\\data\\downloaded\\f6a7b8c9d0e1-dropper.sh",
+    "filename": "f6a7b8c9d0e1-dropper.sh",
+    "size_bytes": 305,
+    "sha256": "3922618aba8e14d807fa2b7a7d29b86a625d912567a851e665e9a2854a014c09",
+    "urls": [
+      "http://malware-cdn.example.invalid/stage2.bin"
+    ],
+    "ips": [],
+    "indicators": [
+      "background_exec",
+      "downloader",
+      "firewall_flush",
+      "log_wipe",
+      "make_executable",
+      "shell_script"
+    ],
+    "risk": "critical",
+    "notes": [
+      "Static lab analysis only \u2014 samples are safe mocks unless from live Cowrie downloads"
+    ]
+  }
+]

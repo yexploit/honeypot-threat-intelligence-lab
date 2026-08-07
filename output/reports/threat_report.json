@@ -1,0 +1,294 @@
+{
+  "title": "Honeypot Threat Intelligence Report",
+  "generated_at": "2026-08-06T15:56:53.862962+00:00",
+  "project": "PROJECT 5 - Honeypot Threat Intelligence Lab",
+  "methodology": {
+    "honeypot": "Cowrie (SSH/Telnet medium-interaction)",
+    "siem": "ELK Stack (Elasticsearch, Logstash, Kibana)",
+    "threat_feeds": [
+      "AbuseIPDB",
+      "AlienVault OTX",
+      "The Honeynet Project",
+      "lab_heuristic"
+    ],
+    "reference": "The Honeynet Project research practices"
+  },
+  "executive_summary": {
+    "total_events": 66,
+    "unique_attacker_ips": 5,
+    "sessions_analyzed": 6,
+    "threat_feed_ips_listed": 4,
+    "payloads_analyzed": 5,
+    "dominant_attack": "iot_botnet_propagation"
+  },
+  "attack_type_breakdown": {
+    "iot_botnet_propagation": 2,
+    "malware_download": 1,
+    "manual_reconnaissance": 1,
+    "cryptominer_deployment": 1,
+    "credential_stuffing": 1
+  },
+  "automation_breakdown": {
+    "automated": 5,
+    "likely_manual": 1
+  },
+  "classifications": [
+    {
+      "session_id": "c3d4e5f6a7b8",
+      "src_ip": "103.149.172.88",
+      "protocol": "telnet",
+      "primary_type": "iot_botnet_propagation",
+      "labels": [
+        "iot_botnet_propagation",
+        "malware_download",
+        "telnet_abuse"
+      ],
+      "automation": "automated",
+      "confidence": 0.9,
+      "failed_logins": 2,
+      "success": true,
+      "command_count": 2,
+      "download_count": 2,
+      "notes": [
+        "Mirai/IoT botnet tooling indicators",
+        "Telnet channel used (common for IoT bots)"
+      ]
+    },
+    {
+      "session_id": "a1b2c3d4e5f6",
+      "src_ip": "185.220.101.45",
+      "protocol": "ssh",
+      "primary_type": "iot_botnet_propagation",
+      "labels": [
+        "iot_botnet_propagation",
+        "malware_download",
+        "ssh_bruteforce"
+      ],
+      "automation": "automated",
+      "confidence": 0.9,
+      "failed_logins": 6,
+      "success": true,
+      "command_count": 5,
+      "download_count": 1,
+      "notes": [
+        "bruteforce then success (6 prior fails)",
+        "Mirai/IoT botnet tooling indicators",
+        "scripted SSH client: SSH-2.0-libssh2_1.10.0"
+      ]
+    },
+    {
+      "session_id": "f6a7b8c9d0e1",
+      "src_ip": "185.220.101.45",
+      "protocol": "ssh",
+      "primary_type": "malware_download",
+      "labels": [
+        "defense_evasion",
+        "malware_download"
+      ],
+      "automation": "automated",
+      "confidence": 0.85,
+      "failed_logins": 0,
+      "success": true,
+      "command_count": 2,
+      "download_count": 1,
+      "notes": [
+        "Log wiping / firewall flush"
+      ]
+    },
+    {
+      "session_id": "d4e5f6a7b8c9",
+      "src_ip": "198.51.100.77",
+      "protocol": "ssh",
+      "primary_type": "manual_reconnaissance",
+      "labels": [
+        "manual_reconnaissance"
+      ],
+      "automation": "likely_manual",
+      "confidence": 0.7,
+      "failed_logins": 0,
+      "success": true,
+      "command_count": 7,
+      "download_count": 0,
+      "notes": [
+        "6 recon commands, human-like pacing"
+      ]
+    },
+    {
+      "session_id": "b2c3d4e5f6a7",
+      "src_ip": "45.33.32.156",
+      "protocol": "ssh",
+      "primary_type": "cryptominer_deployment",
+      "labels": [
+        "cryptominer_deployment",
+        "malware_download",
+        "persistence"
+      ],
+      "automation": "automated",
+      "confidence": 0.92,
+      "failed_logins": 2,
+      "success": true,
+      "command_count": 6,
+      "download_count": 1,
+      "notes": [
+        "Cryptominer / mining-pool indicators",
+        "Persistence mechanism attempted",
+        "scripted SSH client: SSH-2.0-Paramiko_2.11.0"
+      ]
+    },
+    {
+      "session_id": "e5f6a7b8c9d0",
+      "src_ip": "91.219.237.12",
+      "protocol": "ssh",
+      "primary_type": "credential_stuffing",
+      "labels": [
+        "credential_stuffing"
+      ],
+      "automation": "automated",
+      "confidence": 0.75,
+      "failed_logins": 8,
+      "success": false,
+      "command_count": 0,
+      "download_count": 0,
+      "notes": [
+        "8 failed logins, no successful auth"
+      ]
+    }
+  ],
+  "threat_feed_correlation": {
+    "ips_checked": 5,
+    "ips_listed": 4,
+    "urls_checked": 5,
+    "urls_listed": 5,
+    "hashes_checked": 5,
+    "hashes_listed": 5,
+    "honeynet_aligned": true,
+    "feed_sources": [
+      "AbuseIPDB",
+      "AlienVault OTX",
+      "The Honeynet Project",
+      "lab_heuristic"
+    ]
+  },
+  "ioc_counts": {
+    "attacker_ips": 5,
+    "urls": 6,
+    "hashes": 5,
+    "unique_usernames": 12,
+    "unique_passwords": 18,
+    "unique_commands": 22
+  },
+  "notable_attackers": [
+    {
+      "ip": "103.149.172.88",
+      "sessions": 1,
+      "types": [
+        "iot_botnet_propagation"
+      ],
+      "feed": "critical"
+    },
+    {
+      "ip": "185.220.101.45",
+      "sessions": 2,
+      "types": [
+        "iot_botnet_propagation",
+        "malware_download"
+      ],
+      "feed": "critical"
+    },
+    {
+      "ip": "198.51.100.77",
+      "sessions": 1,
+      "types": [
+        "manual_reconnaissance"
+      ],
+      "feed": "unlisted"
+    },
+    {
+      "ip": "45.33.32.156",
+      "sessions": 1,
+      "types": [
+        "cryptominer_deployment"
+      ],
+      "feed": "high"
+    },
+    {
+      "ip": "91.219.237.12",
+      "sessions": 1,
+      "types": [
+        "credential_stuffing"
+      ],
+      "feed": "high"
+    }
+  ],
+  "payload_findings": [
+    {
+      "filename": "a1b2c3d4e5f6-mirai.x86",
+      "risk": "critical",
+      "indicators": [
+        "filename_botnet_hint",
+        "iot_botnet"
+      ],
+      "sha256": "b74f50eca27bf4688bea7eaf4af65f27cdca115c97fe55eb7414a3ab5cbe5b9b"
+    },
+    {
+      "filename": "b2c3d4e5f6a7-xmrig.tar.gz",
+      "risk": "critical",
+      "indicators": [
+        "cryptominer",
+        "filename_miner_hint"
+      ],
+      "sha256": "b35687abbb2cb122cb568c2b1483f4983ba3cb6371d6bef23e5cc8ec349928de"
+    },
+    {
+      "filename": "c3d4e5f6a7b8-bot.arm7",
+      "risk": "medium",
+      "indicators": [
+        "filename_botnet_hint"
+      ],
+      "sha256": "da078fa752a81fa9a81a0e720af708cc5bc257b0bad790858f256e5e38a3a602"
+    },
+    {
+      "filename": "c3d4e5f6a7b8-l.sh",
+      "risk": "critical",
+      "indicators": [
+        "background_exec",
+        "downloader",
+        "iot_botnet",
+        "make_executable",
+        "shell_script"
+      ],
+      "sha256": "7c692b393a7039964f76b6fa08ebb4dd3fb2317d08b9238b8ca36e3454dd4247"
+    },
+    {
+      "filename": "f6a7b8c9d0e1-dropper.sh",
+      "risk": "critical",
+      "indicators": [
+        "background_exec",
+        "downloader",
+        "firewall_flush",
+        "log_wipe",
+        "make_executable",
+        "shell_script"
+      ],
+      "sha256": "3922618aba8e14d807fa2b7a7d29b86a625d912567a851e665e9a2854a014c09"
+    }
+  ],
+  "timeline_stats": {
+    "sessions": 6,
+    "global_events": 66,
+    "attackers": 5
+  },
+  "defensive_recommendations": [
+    "Disable password authentication for SSH; enforce key-based auth and fail2ban/crowdsec.",
+    "Never expose Telnet (TCP/23) on production systems; disable the service entirely.",
+    "Rate-limit new SSH connections at the edge firewall and block known bad ASN ranges.",
+    "Monitor outbound HTTP(S) from servers \u2014 unexpected wget/curl to unknown hosts is high-signal.",
+    "Alert on execution from /tmp, /var/tmp, and hidden filenames (e.g. /tmp/.x).",
+    "Keep an IOC watchlist from this lab and push to firewall / EDR deny lists.",
+    "Segment management interfaces onto a VPN or jump-host VLAN (Honeynet-aligned isolation).",
+    "Detect mining pools (stratum) and high sustained CPU; block mining pool domains.",
+    "Inventory IoT devices; change default credentials; block WAN access to device management ports.",
+    "Treat slow interactive SSH sessions after auth as potential hands-on-keyboard intrusions.",
+    "Block or geo-fence the 5 attacker IPs extracted in this run (validate against false positives first)."
+  ]
+}

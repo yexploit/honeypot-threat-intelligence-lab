@@ -1,0 +1,17 @@
+ioc_type,value,extra,sessions,feed_listed
+ipv4,103.149.172.88,iot_botnet_propagation,1,True
+ipv4,185.220.101.45,iot_botnet_propagation;malware_download,2,True
+ipv4,198.51.100.77,manual_reconnaissance,1,False
+ipv4,45.33.32.156,cryptominer_deployment,1,True
+ipv4,91.219.237.12,credential_stuffing,1,True
+url,http://185.220.101.45/bins/mirai.x86,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,1,True
+url,http://45.33.32.156/xmrig.tar.gz,9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08,1,True
+url,http://103.149.172.88/l.sh,2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d2852309f9f9f0c1,1,True
+url,http://103.149.172.88/bot.arm7;,,1,False
+url,http://103.149.172.88/bot.arm7,6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b,1,True
+url,http://malware-cdn.example.invalid/dropper.sh,4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce,1,True
+sha256,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,http://185.220.101.45/bins/mirai.x86,1,True
+sha256,9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08,http://45.33.32.156/xmrig.tar.gz,1,True
+sha256,2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d2852309f9f9f0c1,http://103.149.172.88/l.sh,1,True
+sha256,6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b,http://103.149.172.88/bot.arm7,1,True
+sha256,4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce,http://malware-cdn.example.invalid/dropper.sh,1,True

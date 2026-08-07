@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+.DS_Store
+Thumbs.db
+data/live_cowrie.json
+.idea/
+.vscode/
+*.log
